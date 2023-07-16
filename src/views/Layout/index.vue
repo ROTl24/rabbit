@@ -13,7 +13,7 @@ import { onMounted } from 'vue'
 const categoryStore = useCategoryStore()
 
 onMounted(() => {
-  categoryStore.getCategoryAction()
+  categoryStore.getCategory()
 })
 </script>
 
