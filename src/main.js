@@ -22,6 +22,9 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
+
+//直接全局懒加载 
+
 app.use(lazyPlugin)
 app.mount('#app')
 

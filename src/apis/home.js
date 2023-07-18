@@ -30,3 +30,15 @@ export function findHotAPI() {
     url:'/home/hot'
   })
 }
+
+/**
+ * @description: 获取所有商品模块
+ * @param {*}
+ * @return {*}
+ */
+
+export function findGoodsAPI() {
+  return httpInstance({
+    url:'/home/goods'
+  })
+}
