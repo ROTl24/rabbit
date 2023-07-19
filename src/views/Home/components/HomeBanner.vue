@@ -1,3 +1,5 @@
+<!-- banner模块是一个轮播图模块，需要在首页和分类页都使用，所以我们把它抽离出来，放在src\views\Home\components\HomeBanner.vue中。 -->
+
 <script setup>
 import { getBannerAPI } from '@/apis/home'
 import { ref, onMounted } from 'vue'

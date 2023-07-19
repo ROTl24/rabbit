@@ -1,3 +1,5 @@
+<!-- 这是一个商品列表组件，用于展示商品列表 -->
+
 <script setup>
 defineProps({
     goods: {

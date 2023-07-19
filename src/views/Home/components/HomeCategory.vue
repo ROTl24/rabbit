@@ -1,3 +1,6 @@
+<!-- 这是一个组件，用于展示首页的分类信息，包括分类名称、分类下的商品信息等。 -->
+
+
 <script setup>
 import { useCategoryStore } from '@/stores/category'
 
