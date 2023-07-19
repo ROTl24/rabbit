@@ -22,6 +22,9 @@ onMounted(() => {
   <LayoutNav />
   <LayoutHeader />
   <!-- 路由出口组件 -->
-  <RouterView />
+  <!-- 添加key破坏复用机制，强制销毁重建 -->
+  <!-- 缺点：页面当中所有的请求的都会重新发送 -->
+  <!-- <RouterView :key="$route.fullPath" /> -->
+  <router-view />
   <LayoutFooter />
 </template>
