@@ -2,6 +2,7 @@
 import { getCategoryAPI } from '@/apis/category'
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
+import { onUpdated } from 'vue'
 // 获取数据列表
 const categoryData = ref({})
 const route = useRoute()
@@ -11,8 +12,12 @@ const getCategory = async () => {
   const res = await getCategoryAPI(route.params.id)
   categoryData.value = res.result
 }
- 
+//页面加载时获取数据
 onMounted(() => {
+  getCategory()
+})
+//当路由参数发生变化时，重新获取数据
+onUpdated(() => {
   getCategory()
 })
 </script>
@@ -26,7 +31,7 @@ onMounted(() => {
         <el-breadcrumb separator=">">
             <!-- 提供面包屑导航项 -->
           <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item id="name">{{categoryData.name}}</el-breadcrumb-item>
+          <el-breadcrumb-item>{{categoryData.name}}</el-breadcrumb-item>
         </el-breadcrumb>
       </div>
 
