@@ -16,7 +16,8 @@ const categoryStore = useCategoryStore()
         </li>
         <!-- 列表渲染出来 -->
         <li class="home" v-for="item in categoryStore.categoryList" :key="item.id">
-          <RouterLink :to="`/category/${item.id}`">{{ item.name }}</RouterLink>
+          <!-- 这个active-class="active"是vue-router的一个属性，可以设置当前路由的样式 -->
+          <RouterLink active-class="active" :to="`/category/${item.id}`">{{ item.name }}</RouterLink>
         </li>
       </ul>
       <div class="search">
